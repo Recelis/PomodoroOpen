@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/pomodoro.css">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"> 
+
+    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./pomodoro.js"></script>
+    
+</head>
+<body>
+    <div class = "clock flex-container">
+                <div id = "fill"></div> 
+                <button class = "clockInternals flex-main" onclick="handler.time()"> 
+                    <h2 id = "status">session</h2>
+                    <h2 id = "timeLeft">start</h2> 
+                </button>
+    </div>
+    <button class = "flex-restart" onclick="handler.restart()">restart</button>
+    <div class = "setTimer">
+        <div class = "breakLength flex-TimerContainer">
+            <button id="decreaseBreak" class = "flex-setTimer"  onclick="handler.changeBreakLength(this)">-</button>
+            <p id = "breakTime" class = "flex-setTimer">5:00</p>
+            <button id ="increaseBreak" class = "flex-setTimer" onclick="handler.changeBreakLength(this)">+</button>
+        </div>
+        <div class = "sessionLength flex-TimerContainer">
+            <button id ="decreaseSession" class = "flex-setTimer" onclick="handler.changeSessionLength(this)">-</button>
+            <p id = "sessionTime" class = "flex-setTimer">25:00</p>
+            <button id ="increaseSession" class = "flex-setTimer" onclick="handler.changeSessionLength(this)">+</button>
+        </div>
+    </div>
+    <p class = "copyright"> &#169; Created by Jacky Lui 2017 
+        <span><button onClick = "openWindow()" class = "github"><img class = "github" src = "./img/github.png"></img></button></span>
+    </p>
+</body>
+</html>
